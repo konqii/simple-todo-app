@@ -1,0 +1,3 @@
+<mat-list>
+  <app-todo-item *ngFor="let todo of todos" [todo]="todo" (completeChange)="completeChange($event)" (delete)="todoDeleted.emit($event)"></app-todo-item>
+</mat-list>

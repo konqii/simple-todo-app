@@ -1,0 +1,6 @@
+<app-todo
+  [todos]="todos$ | async"
+  (completedTodo)="completeTodo($event)"
+  (deletedTodo)="deleteTodo($event)"
+  (addedTodo)="addTodo($event)">
+</app-todo>

@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Todo App - Completed {{todos | todoCompleted}}</mat-card-title>
+  </mat-card-header>
+  <app-todo-list [todos]="todos" (todoCompleted)="completedTodo.emit($event)" (todoDeleted)="deletedTodo.emit($event)"></app-todo-list>
+</mat-card>
+<mat-divider></mat-divider>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add Todo</mat-card-title>
+  </mat-card-header>
+  <app-add-todo (todoAdded)="addedTodo.emit($event)"></app-add-todo>
+</mat-card>
