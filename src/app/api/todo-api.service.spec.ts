@@ -3,7 +3,7 @@ import { map, mapTo, switchMap, tap } from 'rxjs/operators';
 
 import { TodoApiService } from './todo-api.service';
 import { TodoMockApiService } from './todo-mock-api.service';
-import { Todo } from './Todo.mode';
+import { Todo } from './Todo.model';
 
 let todoApiServiceStub = new TodoMockApiService();
 

@@ -1,7 +1,7 @@
 import { EventEmitter } from '@angular/core';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
-import { Todo } from 'src/app/api/Todo.mode';
+import { Todo } from 'src/app/api/Todo.model';
 
 @Component({
   selector: 'app-todo-list',
@@ -19,6 +19,7 @@ export class TodoListComponent implements OnInit {
   }
 
   completeChange(event: MatCheckboxChange) {
-    this.todoCompleted.emit({...event.source.value as unknown as Todo, completed: event.checked});
+    const todo: Todo = event.source.value as unknown as Todo;
+    this.todoCompleted.emit({...todo, completed: event.checked});
   }
 }

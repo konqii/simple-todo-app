@@ -3,18 +3,17 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map, catchError, tap, switchMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { AbstractTodoApi } from './AbstractTodoApi';
-import { Todo } from './Todo.mode';
+import { TodoApi } from './TodoApi';
+import { Todo } from './Todo.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TodoApiService extends AbstractTodoApi {
+export class TodoApiService implements TodoApi {
   private baseUrl: string = environment.todo;
   private headers = new HttpHeaders({ 'Accept': 'application/json', 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
 
   constructor(private readonly http: HttpClient) {
-    super();
   }
 
   public createTodo(todo: Todo): Observable<boolean> {

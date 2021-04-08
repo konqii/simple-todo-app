@@ -26,12 +26,6 @@ describe('TodoItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TodoItemComponent);
     component = fixture.componentInstance;
-    component.todo = {
-      id: '1',
-      title: 'hello',
-      description: '',
-      completed: false
-    }
     fixture.detectChanges();
   });
 

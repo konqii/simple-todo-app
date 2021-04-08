@@ -1,7 +1,7 @@
 import { EventEmitter } from '@angular/core';
 import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Todo } from 'src/app/api/Todo.mode';
+import { Todo } from 'src/app/api/Todo.model';
 import {v4 as uuid} from 'uuid';
 
 @Component({

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { TodoApiService } from '../api/todo-api.service';
 import { TodoMockApiService } from '../api/todo-mock-api.service';
-import { Todo } from '../api/Todo.mode';
+import { Todo } from '../api/Todo.model';
 import { TodoService } from './todo.service';
 
 describe('TodoService', () => {

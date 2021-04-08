@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { of } from 'rxjs';
-import { Todo } from '../api/Todo.mode';
+import { Todo } from '../api/Todo.model';
 
 import { TodoPageComponent } from './todo-page.component';
 import { TodoService } from './todo.service';

@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { groupBy, partial, partition, prop, propEq } from 'ramda';
-import { Todo } from 'src/app/api/Todo.mode';
+import { Todo } from 'src/app/api/Todo.model';
 
 @Pipe({
   name: 'todoCompleted'

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
-import { Todo } from 'src/app/api/Todo.mode';
+import { Todo } from 'src/app/api/Todo.model';
 
 @Component({
   selector: 'app-todo-item',

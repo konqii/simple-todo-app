@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { delay } from 'rxjs/operators';
-import { AbstractTodoApi } from './AbstractTodoApi';
-import { Todo } from './Todo.mode';
+import { Todo } from './Todo.model';
+import { TodoApi } from './TodoApi';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TodoMockApiService extends AbstractTodoApi {
+export class TodoMockApiService implements TodoApi {
   private mockData: Todo[] = [{
     id: '0',
     title: 'Ullamco minim mollit ex duis nulla.',

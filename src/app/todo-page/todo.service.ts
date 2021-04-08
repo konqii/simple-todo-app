@@ -3,7 +3,7 @@ import { propEq, when } from 'ramda';
 import { BehaviorSubject, combineLatest, of, Subject } from 'rxjs';
 import { catchError, distinctUntilChanged, map, mapTo, startWith, switchMap } from 'rxjs/operators';
 import { TodoApiService } from '../api/todo-api.service';
-import { Todo } from '../api/Todo.mode';
+import { Todo } from '../api/Todo.model';
 
 interface TodoState {
   todos: Todo[];

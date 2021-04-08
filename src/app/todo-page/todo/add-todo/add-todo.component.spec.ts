@@ -3,7 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Todo } from 'src/app/api/Todo.mode';
+import { Todo } from 'src/app/api/Todo.model';
 
 import { AddTodoComponent } from './add-todo.component';
 
@@ -30,12 +30,11 @@ describe('AddTodoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', (done: jest.DoneCallback) => {
+  it('should create', () => {
     expect(component).toBeTruthy();
-    done();
   });
 
-  it('should emit todo', (done: jest.DoneCallback) => {
+  it('should emit todo', () => {
     const spy = jest.spyOn(component.todoAdded, 'emit');
     const form: NgForm = {
       value: {
@@ -45,6 +44,5 @@ describe('AddTodoComponent', () => {
     } as NgForm;
     component.onSubmit(form);
     expect(spy).toHaveBeenCalled();
-    done();
   })
 });
